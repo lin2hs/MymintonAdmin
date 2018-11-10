@@ -1,6 +1,8 @@
 package bbs.lochv.adminbbs;
 
 
+import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
@@ -22,6 +25,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 
 /**
@@ -44,6 +48,9 @@ public class EditInformationFragment extends Fragment {
     private EditText edtCourtAddress;
     private EditText edtCourtPhone;
     private EditText edtCourtPrice;
+    private TextView txtCourtStartTime;
+    private TextView txtCourtEndTime;
+
     private String name;
     private String address;
     private String price;
@@ -75,6 +82,8 @@ public class EditInformationFragment extends Fragment {
         txtCourtPhone = view.findViewById(R.id.txtCourtPhone);
         edtCourtName = view.findViewById(R.id.edtCourtName);
         edtCourtAddress = view.findViewById(R.id.edtCourtAddress);
+        txtCourtStartTime = view.findViewById(R.id.txtCourtStartTime);
+        txtCourtEndTime = view.findViewById(R.id.txtCourtEndTime);
         edtCourtPhone = view.findViewById(R.id.edtCourtPhone);
         edtCourtPrice = view.findViewById(R.id.edtCourtPrice);
         btnEditCourtProfile = view.findViewById(R.id.btnEditCourtProfile);
@@ -102,9 +111,23 @@ public class EditInformationFragment extends Fragment {
         vscCourtPhone.showNext();
         edtCourtPhone.setText(txtCourtPhone.getText().toString());
         vscCourtPrice.showNext();
+        txtCourtStartTime.setTextColor(getResources().getColor(R.color.colorAccent));
+        txtCourtStartTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectStartTime();
+            }
+        });
+        txtCourtEndTime.setTextColor(getResources().getColor(R.color.colorAccent));
+        txtCourtEndTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectEndTime();
+            }
+        });
         int price = txtCourtPrice.getText().toString().indexOf(" ");
         String priceValue = txtCourtPrice.getText().toString().substring(0, price);
-        priceValue.replace(".", "");
+        priceValue = priceValue.replace(".", "");
         edtCourtPrice.setText(priceValue);
     }
 
@@ -116,13 +139,78 @@ public class EditInformationFragment extends Fragment {
         vscCourtPhone.showNext();
         txtCourtPhone.setText(edtCourtPhone.getText().toString());
         vscCourtPrice.showNext();
-        String number = edtCourtPrice.getText().toString().replace(".", "");
-        Integer amount = Integer.getInteger(number);
-        DecimalFormat formatter = new DecimalFormat("#.###");
-        txtCourtPrice.setText(String.valueOf(formatter.format(amount)) + " VNĐ");
+        txtCourtStartTime.setTextColor(getResources().getColor(R.color.colorGray));
+        txtCourtStartTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
+        txtCourtEndTime.setTextColor(getResources().getColor(R.color.colorGray));
+        txtCourtEndTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        String number = edtCourtPrice.getText().toString().trim();
+        Integer amount = Integer.parseInt(number);
+        DecimalFormat formatter = new DecimalFormat("#,###");
+        String value = String.valueOf(formatter.format(amount));
+        value = value.replace(",", ".");
+        txtCourtPrice.setText(value + " VNĐ");
         btnEditCourtProfile.setText("Chỉnh sửa");
         btnEditCourtProfile.setBackgroundColor(getResources().getColor(R.color.colorGreen));
+    }
+
+    private void selectStartTime() {
+        String startTime = txtCourtStartTime.getText().toString();
+        String[] selectedTime = startTime.split(":");
+        int hour = Integer.parseInt(selectedTime[0]);
+        int minute = Integer.parseInt(selectedTime[1]);
+        TimePickerDialog mTimePicker;
+        mTimePicker = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                if (selectedMinute >= 30) {
+                    selectedMinute = 0;
+                    selectedHour += 1;
+                    txtCourtStartTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                } else if (selectedMinute < 30 && selectedMinute > 0) {
+                    selectedMinute = 30;
+                    txtCourtStartTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                } else {
+                    txtCourtStartTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                }
+            }
+        }, hour, minute, true);
+        mTimePicker.setTitle("Chọn giờ mở cửa");
+        mTimePicker.show();
+    }
+
+    private void selectEndTime() {
+        String startTime = txtCourtEndTime.getText().toString();
+        String[] selectedTime = startTime.split(":");
+        int hour = Integer.parseInt(selectedTime[0]);
+        int minute = Integer.parseInt(selectedTime[1]);
+        TimePickerDialog mTimePicker;
+        mTimePicker = new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                if (selectedMinute >= 30) {
+                    selectedMinute = 0;
+                    selectedHour += 1;
+                    txtCourtEndTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                } else if (selectedMinute < 30 && selectedMinute > 0) {
+                    selectedMinute = 30;
+                    txtCourtEndTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                } else {
+                    txtCourtEndTime.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                }
+            }
+        }, hour, minute, true);
+        mTimePicker.setTitle("Chọn giờ đóng cửa");
+        mTimePicker.show();
     }
 
     private class AsyncTaskUpdateBCourtInformation extends AsyncTask<Void, Void, Void> {
