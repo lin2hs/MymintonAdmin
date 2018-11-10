@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/ItemSlotsBookedLayout"
+    android:background="@drawable/slots_border_clicked"
+    android:gravity="center">
+
+    <LinearLayout
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingRight="1dp"
+        android:paddingLeft="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/txtBookedSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:paddingTop="4sp"
+            android:paddingBottom="4sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:textColor="@color/colorWhite"
+            android:text="07:00 - 08:00"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</LinearLayout>

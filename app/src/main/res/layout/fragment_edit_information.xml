@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray"
+    android:orientation="vertical"
+    android:weightSum="16"
+    tools:context=".EditInformationFragment">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="15.75">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15.75"
+            android:orientation="vertical"
+            android:weightSum="16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="16"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/colorWhite"
+                        android:drawableLeft="@drawable/user"
+                        android:padding="14dp" />
+
+                    <ViewSwitcher
+                        android:id="@+id/vscCourtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <TextView
+                            android:id="@+id/txtCourtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autoSizeTextType="uniform"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:text="Sân cầu lông Trường Chinh"
+                            android:textSize="21sp" />
+
+                        <EditText
+                            android:id="@+id/edtCourtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
+                            android:textSize="21sp" />
+                    </ViewSwitcher>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/colorWhite"
+                        android:drawableLeft="@drawable/address"
+                        android:padding="14dp" />
+
+                    <ViewSwitcher
+                        android:id="@+id/vscCourtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <TextView
+                            android:id="@+id/txtCourtAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autoSizeTextType="uniform"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:padding="10dp"
+                            android:text="123 Trường Chinh, Quận 12, Tp.HCM"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/edtCourtAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:autoSizeTextType="uniform"
+                            android:background="@color/colorWhite"
+                            android:maxLines="2"
+                            android:textSize="16sp" />
+                    </ViewSwitcher>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/colorWhite"
+                        android:drawableLeft="@drawable/phone"
+                        android:padding="14dp" />
+
+                    <ViewSwitcher
+                        android:id="@+id/vscCourtPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <TextView
+                            android:id="@+id/txtCourtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="+84 164 258 654"
+                            android:textSize="21sp" />
+
+                        <EditText
+                            android:id="@+id/edtCourtPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
+                            android:textSize="21sp" />
+                    </ViewSwitcher>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/colorWhite"
+                        android:drawableLeft="@drawable/clock24"
+                        android:padding="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="8"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:textAlignment="center"
+                        android:weightSum="10">
+
+
+                        <TextView
+                            android:id="@+id/txtCourtStartTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="7:00"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="-"
+                            android:textSize="21sp" />
+
+                        <TextView
+                            android:id="@+id/txtCourtEndTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="19:00"
+                            android:textSize="21sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="10dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/colorWhite"
+                        android:drawableLeft="@drawable/banknote"
+                        android:padding="14dp" />
+
+                    <ViewSwitcher
+                        android:id="@+id/vscCourtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <TextView
+                            android:id="@+id/txtCourtPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="100.000 VNĐ"
+                            android:textSize="21sp" />
+
+                        <EditText
+                            android:id="@+id/edtCourtPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
+                            android:textSize="21sp" />
+                    </ViewSwitcher>
+
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="25dp"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:paddingRight="25dp"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:weightSum="10">-->
+
+
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+    <Button
+        android:id="@+id/btnEditCourtProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight=".25"
+        android:background="@color/colorGreen"
+        android:onClick="clickToEditInformation"
+        android:text="Chỉnh sửa"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        tools:ignore="OnClick" />
+
+</LinearLayout>
