@@ -28,7 +28,6 @@
         <activity
             android:name=".AddPromotionActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".DemoPromotionActivity"></activity>
     </application>
 
 </manifest>

@@ -1,937 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPromotionItem"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
+    android:weightSum="16"
     tools:context=".AddPromotionActivity">
 
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="10">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/layoutToEdit"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:weightSum="10"-->
+    <!--android:layout_weight="8">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtPromotionItemsName"-->
+    <!--android:textSize="16sp"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:text="Tên khuyến mãi"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:textStyle="bold"-->
+    <!--android:layout_weight="5"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtPromotionItemsDate"-->
+    <!--android:textSize="16sp"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:text="11/11/2018 - 31/11/2018"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="5"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_weight="2"-->
+    <!--android:weightSum="10">-->
+
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="2.5"/>-->
+
+    <!--<Switch-->
+    <!--android:id="@+id/swPromotionItemsActivate"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="5"-->
+    <!--android:gravity="center_horizontal"/>-->
+
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="2.5"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="15.75">-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="2.5"
+        android:layout_weight="15.75"
         android:orientation="vertical"
-        android:weightSum="10">
+        android:weightSum="16">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3.5"
-            android:orientation="horizontal"
-            android:weightSum="10">
+            android:layout_weight="16"
+            android:orientation="vertical"
+            android:weightSum="7">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="2.5"
-                android:autoSizeTextType="uniform"
-                android:maxLines="1"
-                android:text="Tên sự kiện"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:weightSum="10">
 
-            <EditText
-                android:id="@+id/txtPromotionName"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7.5"
-                android:textSize="18sp" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/promotionname"
+                    android:padding="14dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6.5"
-            android:orientation="horizontal"
-            android:weightSum="10">
+                <EditText
+                    android:hint="Tên chương trình"
+                    android:id="@+id/edtPromotionName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.8"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="2.5"
-                android:text="Nội dung"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:weightSum="10">
 
-            <EditText
-                android:id="@+id/txtPromotionContent"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="7.5"
-                android:gravity="top|left"
-                android:inputType="textMultiLine"
-                android:lines="3"
-                android:maxLines="3"
-                android:minLines="1"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/promotioncontent"
+                    android:padding="14dp" />
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="0.5">-->
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:layout_gravity="center_vertical"-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_marginRight="20dp"-->
-            <!--android:background="@color/colorGray" />-->
+                <EditText
+                    android:id="@+id/edtPromotionContent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.8"
+                    android:hint="Nội dung chương trình"
+                    android:autoSizeTextType="uniform"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-    <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:weightSum="10">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="5dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ngày bắt đầu"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/promotionstart"
+                    android:padding="14dp" />
 
-        <TextView
-            android:id="@+id/txtSelectStartDay"
-            android:onClick="clickToSelectStartDay"
-            android:paddingLeft="30dp"
-            android:layout_width="wrap_content"
-            android:textSize="16sp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorBlack"
-            android:text="Nhấn để chọn ngày bắt đầu"></TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingLeft="5dp"
-        android:paddingTop="50dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ngày kết thúc"
-            android:textColor="@color/colorBlack"
-            android:textSize="16sp"/>
 
-        <TextView
-            android:id="@+id/txtSelectEndDay"
-            android:onClick="clickToSelectEndDay"
-            android:paddingLeft="30dp"
-            android:layout_width="wrap_content"
-            android:textSize="16sp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorBlack"
-            android:text="Nhấn để chọn ngày kết thúc"></TextView>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/txtPromotionStartDay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.8"
+                    android:text="Nhấn để chọn ngày BẮT ĐẦU khuyến mãi"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="7"-->
-        <!--android:orientation="vertical"-->
-        <!--android:isScrollContainer="true"-->
-        <!--android:scrollbars="vertical">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:weightSum="10">
 
-        <!--<ScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:scrollbars="vertical"-->
-            <!--android:fillViewport="true"-->
-            <!--android:isScrollContainer="true">-->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/promotionfinish"
+                    android:padding="14dp" />
+
+                <TextView
+                    android:id="@+id/txtPromotionEndDay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.8"
+                    android:text="Nhấn để chọn ngày KẾT THÚC khuyến mãi"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_weight="8"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:weightSum="10">-->
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtCourtStartTime"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="7:00"-->
+                <!--android:textSize="21sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="-"-->
+                <!--android:textSize="21sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtCourtEndTime"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="4"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="19:00"-->
+                <!--android:textSize="21sp" />-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="10dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/colorWhite"
+                    android:drawableLeft="@drawable/promotionpercentage"
+                    android:padding="14dp" />
+
+                <TextView
+                    android:id="@+id/txtPromotionPercentage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.8"
+                    android:text="Nhấn để chọn % giảm giá"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="2"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:drawableLeft="@drawable/banknote"-->
+                <!--android:padding="14dp" />-->
+
+                <!--<ViewSwitcher-->
+                <!--android:id="@+id/vscCourtPrice"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="8">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/txtCourtPrice"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="10dp"-->
+                <!--android:text="100.000 VNĐ"-->
+                <!--android:textSize="21sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/edtCourtPrice"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/colorWhite"-->
+                <!--android:gravity="center"-->
+                <!--android:textSize="21sp" />-->
+                <!--</ViewSwitcher>-->
+
+            </LinearLayout>
 
             <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:scrollbars="vertical"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:isScrollContainer="true"-->
-                <!--android:orientation="vertical"-->
-                <!--android:weightSum="32">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingLeft="25dp"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingRight="25dp"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:weightSum="10">-->
 
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 2"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtMondayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvMondayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 3"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtTuesdayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvTuesdayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 4"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtWednesdayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvWednesdayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 5"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtThusdayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvThusdayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 6"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtFridayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvFridayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Thứ 7"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtSaturdayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvSaturdayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="4"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_weight="1" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2"-->
-                        <!--android:orientation="vertical"-->
-                        <!--android:weightSum="10">-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="4"-->
-                            <!--android:text="Chủ nhật"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorBlack"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<TextView-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="0dp"-->
-                            <!--android:layout_weight="6"-->
-                            <!--android:gravity="center_horizontal|center_vertical"-->
-                            <!--android:onClick="clickToSelectMondayPercentage"-->
-                            <!--android:text="Nhấn chọn %"-->
-                            <!--android:textAlignment="center"-->
-                            <!--android:textColor="@color/colorAccent"-->
-                            <!--android:textSize="14sp" />-->
-                    <!--</LinearLayout>-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="0.2" />-->
-
-                    <!--<ViewSwitcher-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6">-->
-
-                        <!--<TextView-->
-                            <!--android:id="@+id/txtSundayDiscount"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:onClick="clickToSelectMondayDiscount"-->
-                            <!--android:text="Nhấn để chọn giờ giảm giá"-->
-                            <!--android:textColor="@color/colorCornflowerBlue"-->
-                            <!--android:textSize="16sp" />-->
-
-                        <!--<android.support.v7.widget.RecyclerView-->
-                            <!--android:id="@+id/rvSundayDiscountSlots"-->
-                            <!--android:layout_width="match_parent"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_gravity="top"-->
-                            <!--android:background="@color/colorWhite"-->
-                            <!--android:scrollbars="vertical"-->
-                            <!--android:textAlignment="center">-->
-
-                        <!--</android.support.v7.widget.RecyclerView>-->
-
-                    <!--</ViewSwitcher>-->
-
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
-
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.05"-->
-                    <!--android:orientation="horizontal"-->
-                    <!--android:weightSum="10">-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-
-                    <!--<LinearLayout-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="6"-->
-                        <!--android:background="@color/colorGray"-->
-                        <!--android:gravity="center|center_horizontal" />-->
-
-                    <!--<Space-->
-                        <!--android:layout_width="0dp"-->
-                        <!--android:layout_height="match_parent"-->
-                        <!--android:layout_weight="2" />-->
-                <!--</LinearLayout>-->
-
-                <!--<Space-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="0.25" />-->
 
             <!--</LinearLayout>-->
-        <!--</ScrollView>-->
-    <!--</LinearLayout>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
     <Button
+        android:id="@+id/btnAddPromotion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="bottom"
+        android:layout_weight=".25"
+        android:background="@color/colorGreen"
+        android:onClick="clickToEditInformation"
+        android:text="Thêm mới"
         android:textColor="@color/colorWhite"
-        android:background="@color/colorCornflowerBlue"
-        android:text="Tạo khuyến mãi"/>
+        android:textSize="16sp"
+        tools:ignore="OnClick" />
+
 </LinearLayout>

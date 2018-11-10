@@ -53,30 +53,31 @@ public class PromotionFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_promotion, container, false);
 
-        listOfPromotion = new ArrayList<String>();
-        listDisplayPromotion = view.findViewById(R.id.listPromotion);
-        listOfPromotion.add("Khuyến mãi 1");
-        listItems = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_2, android.R.id.text1, listOfPromotion) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-                TextView text1 = (TextView) view.findViewById(android.R.id.text1);
-                TextView text2 = (TextView) view.findViewById(android.R.id.text2);
+//        listOfPromotion = new ArrayList<String>();
+//        listDisplayPromotion = view.findViewById(R.id.listPromotion);
+//        listOfPromotion.add("Khuyến mãi 1");
+//        listItems = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_2, android.R.id.text1, listOfPromotion) {
+//            @Override
+//            public View getView(int position, View convertView, ViewGroup parent) {
+//                View view = super.getView(position, convertView, parent);
+//                TextView text1 = (TextView) view.findViewById(android.R.id.text1);
+//                TextView text2 = (TextView) view.findViewById(android.R.id.text2);
+//
+//                text1.setText(listOfPromotion.get(position).toString());
+//                text2.setText("Đang khuyến mãi");
+//                return view;
+//            }
+//        };
+//        listDisplayPromotion.setClickable(true);
+//        listDisplayPromotion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(getContext(), DemoPromotionActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        listDisplayPromotion.setAdapter(listItems);
 
-                text1.setText(listOfPromotion.get(position).toString());
-                text2.setText("Đang khuyến mãi");
-                return view;
-            }
-        };
-        listDisplayPromotion.setClickable(true);
-        listDisplayPromotion.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getContext(), DemoPromotionActivity.class);
-                startActivity(intent);
-            }
-        });
-        listDisplayPromotion.setAdapter(listItems);
         FloatingActionButton fabClickToAddPromotion = view.findViewById(R.id.fabClickToAddPromotion);
         fabClickToAddPromotion.setOnClickListener(new View.OnClickListener() {
             @Override
